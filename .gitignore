@@ -1,9 +1,19 @@
+# RDS files
+*.rds
+
+# Log files
+log.txt
+
 # History files
 .Rhistory
 .Rapp.history
 
 # Session Data files
 .RData
+
+# Example code
+man/hello.Rd
+R/hello.R
 
 # Example code in package build process
 *-Ex.R
@@ -15,6 +25,7 @@
 /*.Rcheck/
 
 # RStudio files
+*.Rproj
 .Rproj.user/
 
 # produced vignettes
@@ -31,3 +42,4 @@ vignettes/*.pdf
 # Temporary files created by R markdown
 *.utf8.md
 *.knit.md
+.Rproj.user

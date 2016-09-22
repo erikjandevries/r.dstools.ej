@@ -1,0 +1,12 @@
+Package: dstools.ej
+Type: Package
+Title: Data Science Tools by Erik Jan
+Version: 0.1.0
+Author: Erik Jan de Vries
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Description: Functions for common data science related problems
+License: Apache License 2.0
+LazyData: TRUE
+Imports:
+    dplyr
+  , logging
