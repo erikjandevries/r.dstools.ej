@@ -1,3 +1,4 @@
+#' @export
 restart_project <- function(  log_level = "DEBUG"
                             , log_file  = "log.txt"
                            ) {
@@ -9,7 +10,7 @@ restart_project <- function(  log_level = "DEBUG"
   gc();
   # Clear the console screen
   cat("\014");
-  
+
   ######## Logging ########
   start_logging(level = log_level, file = log_file);
   loginfo(paste("Current working directory:", getwd()));

@@ -1,3 +1,4 @@
+#' @export
 ensure_folder <- function (folder) {
   if (!dir.exists(folder)) {
     loginfo(paste("Creating folder:", folder));

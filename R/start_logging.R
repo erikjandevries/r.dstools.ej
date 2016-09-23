@@ -1,9 +1,35 @@
+#' @title
+#' Start Logging
+#'
+#' @description
+#'
+#' @details
+#' Starts logging by loading the \code{logging} package, resetting the logging
+#' (reset = TRUE, the default). Then it sets up a handler to log to the console,
+#' and if a file has been specified it sets up a handler to log to the file.
+#' Finally a message is logged at the INFO level to indicate that the logging has been started.
+#'
+#' @seealso
+#' \code{\link{logging}} a tentative logging package
+#'
+#' @examples
+#' start_logging()
+#' start_logging(file = 'log.txt')
+#' start_logging(  level = 'CRITICAL'
+#'               , logger = 'my_logger'
+#'               , reset = FALSE)
+#'
+#' @export
 start_logging <- function(  level  = 'INFO'
                           , file   = NULL
                           , logger = ''
                           , reset  = TRUE
                          ) {
-  library(logging);
+
+  if (!requireNamespace("logging", quietly = TRUE)) {
+    stop("Logging needed for this function to work. Please install it.", call. = FALSE)
+  }
+
   if (reset) logReset();
 
   # Start logging to the console

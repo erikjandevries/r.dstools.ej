@@ -1,3 +1,4 @@
+#' @export
 split_evenly <- function (x, n) {
   # Create a list to hold the resulting split
   y <- list();
@@ -5,7 +6,7 @@ split_evenly <- function (x, n) {
   s <- floor(length(x) / n);
   # Determine the remainder
   r <- length(x) %% n;
-  
+
   if (r>0) {
     # We create r batches with size s+1
     for (i in 1:r) {
