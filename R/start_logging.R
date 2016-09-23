@@ -1,7 +1,7 @@
-start_logging <- function(  level = 'INFO'
-                          , file = NULL
+start_logging <- function(  level  = 'INFO'
+                          , file   = NULL
                           , logger = ''
-                          , reset = TRUE
+                          , reset  = TRUE
                          ) {
   library(logging);
   if (reset) logReset();
