@@ -10,3 +10,6 @@ LazyData: TRUE
 Imports:
     dplyr
   , logging
+Suggests:
+    RODBC
+  , ROracle
