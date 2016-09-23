@@ -32,13 +32,13 @@
 }
 
 \details{
-  If the \code{rds} exists, it will be read. Otherwise the \code{file} will
-  be read and an \code{rds} of the resulting object will be saved.
+  If the \code{rds} file exists, the object will be loaded from the \code{rds}.
+  Otherwise the \code{file} will be read and an \code{rds} of the resulting
+  object will be saved.
 }
 
 \seealso{
-  \code{\link{do.call.cached}} which wraps around the \code{read.table}-based
-    functions and performs the caching.
+  \code{\link{do.call.cached}} which is the wrapper function that performs the caching.
 
   \code{\link{read.table}} which is called to read the data file.
 }

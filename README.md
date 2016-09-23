@@ -2,6 +2,9 @@
 
 R functions for common data science related problems.
 
-* do.call.cached
-* read.table.cached
-* start_logging
+* Cached functions
+  * do.call.cached
+  * read.table.cached
+  * sqlQuery.cached
+* Logging
+  * start_logging

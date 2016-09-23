@@ -25,9 +25,9 @@
 }
 
 \details{
-  If the \code{rds} exists, it will be read. Otherwise the function \code{what}
-  will be called via \code{do.call} and an \code{rds} of the resulting object
-  will be saved.
+  If the \code{rds} file exists, the object will be loaded from the \code{rds}.
+  Otherwise the function \code{what} will be called via \code{do.call} and
+  an \code{rds} of the resulting object will be saved.
 }
 
 
