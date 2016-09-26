@@ -13,5 +13,7 @@ restart_project <- function(  log_level = "DEBUG"
 
   ######## Logging ########
   start_logging(level = log_level, file = log_file);
-  loginfo(paste("Current working directory:", getwd()));
+  if (requireNamespace("logging", quietly = TRUE)) {
+    logging::loginfo(paste("Current working directory:", getwd()));
+  }
 }

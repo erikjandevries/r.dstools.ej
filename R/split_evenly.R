@@ -1,3 +1,15 @@
+#' @title
+#' Split a vector in equal groups
+#'
+#' @description
+#' Splits a vector into groups of (almost) equal length.
+#'
+#' @param x A vector containing values to be split into groups.
+#' @param n The number of groups to create.
+#'
+#' @examples
+#' split_evenly(1:10, 4)
+#'
 #' @export
 split_evenly <- function (x, n) {
   # Create a list to hold the resulting split

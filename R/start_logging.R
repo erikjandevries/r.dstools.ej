@@ -27,20 +27,20 @@ start_logging <- function(  level  = 'INFO'
                          ) {
 
   if (!requireNamespace("logging", quietly = TRUE)) {
-    stop("Logging needed for this function to work. Please install it.", call. = FALSE)
+    stop("Logging package needed for this function to work. Please install it.", call. = FALSE)
   }
 
-  if (reset) logReset();
+  if (reset) logging::logReset();
 
   # Start logging to the console
-  addHandler(  writeToConsole
+  logging::addHandler(  logging::writeToConsole
              , level = level
              , logger = logger
             );
 
   # Start logging to the file (if a file has been specified)
   if (!is.null(file)) {
-    addHandler(  writeToFile
+    logging::addHandler(  logging::writeToFile
                , file = file
                , level = level
                , logger = logger
@@ -48,8 +48,8 @@ start_logging <- function(  level  = 'INFO'
   }
 
   # Log that logging has started
-  loginfo(paste("Logging started at level:", level), logger = logger);
+  logging::loginfo(paste("Logging started at level:", level), logger = logger);
   if (!is.null(file)) {
-    loginfo(paste("Log saved to file:", file), logger = logger);
+    logging::loginfo(paste("Log saved to file:", file), logger = logger);
   }
 }
