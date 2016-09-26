@@ -24,10 +24,6 @@
 #'
 #' @export
 sqlQuery.cached <- function(rds, channel, query, ...) {
-  if (!requireNamespace("RODBC", quietly = TRUE)) {
-    stop("RODBC package needed for this function to work. Please install it.", call. = FALSE)
-  }
-  
   obj <- do.call.cached(rds, RODBC::sqlQuery, c(channel, query, list(...)));
   return(obj);
 }

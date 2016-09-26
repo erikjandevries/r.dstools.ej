@@ -10,9 +10,9 @@ Depends:
 License: Apache License 2.0
 LazyData: TRUE
 Imports:
-      logging
+    logging,
 Suggests:
-      dplyr
-    , RODBC
-    , ROracle
+    dplyr,
+    RODBC,
+    ROracle,
 RoxygenNote: 5.0.1

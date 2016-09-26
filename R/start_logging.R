@@ -20,31 +20,26 @@
 #'               , reset = FALSE)
 #'
 #' @export
-start_logging <- function(  level  = 'INFO'
+start_logging <- function(  level  = "INFO"
                           , file   = NULL
-                          , logger = ''
+                          , logger = ""
                           , reset  = TRUE
                          ) {
-
-  if (!requireNamespace("logging", quietly = TRUE)) {
-    stop("Logging package needed for this function to work. Please install it.", call. = FALSE)
-  }
-
   if (reset) logging::logReset();
 
   # Start logging to the console
   logging::addHandler(  logging::writeToConsole
-             , level = level
-             , logger = logger
-            );
+                      , level = level
+                      , logger = logger
+                     );
 
   # Start logging to the file (if a file has been specified)
   if (!is.null(file)) {
     logging::addHandler(  logging::writeToFile
-               , file = file
-               , level = level
-               , logger = logger
-              );
+                        , file = file
+                        , level = level
+                        , logger = logger
+                       );
   }
 
   # Log that logging has started
