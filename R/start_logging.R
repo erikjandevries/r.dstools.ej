@@ -25,13 +25,16 @@ start_logging <- function(  level  = "INFO"
                           , logger = ""
                           , reset  = TRUE
                          ) {
-  if (reset) logging::logReset();
+  if (reset) {
+    logging::logReset();
+    logging::basicConfig(level = level);
+  }
 
-  # Start logging to the console
-  logging::addHandler(  logging::writeToConsole
-                      , level = level
-                      , logger = logger
-                     );
+  # # Start logging to the console
+  # logging::addHandler(  logging::writeToConsole
+  #                     , level = level
+  #                     , logger = logger
+  #                    );
 
   # Start logging to the file (if a file has been specified)
   if (!is.null(file)) {
