@@ -15,3 +15,4 @@ R functions for common data science related problems.
   * restart_project
 * Utilities
   * ensure_folder
+  * install.packages.ifmissing
