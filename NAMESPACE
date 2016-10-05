@@ -2,6 +2,7 @@
 
 export(do.call.cached)
 export(ensure_folder)
+export(install.packages.ifmissing)
 export(predict_batched)
 export(read.csv.cached)
 export(read.csv2.cached)
