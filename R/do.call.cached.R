@@ -40,7 +40,7 @@ do.call.cached <- function(rds, what, args, quote = FALSE, envir = parent.frame(
   else fname <- as.character(substitute(what));
 
   # Call the function
-  logging::logdebug(paste("Calling function:", what));
+  logging::logdebug(paste("Calling function:", fname));
   obj <- do.call(what, args = args, quote = quote, envir = envir);
 
   # Save the object as an RDS file
