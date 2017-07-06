@@ -23,11 +23,11 @@ Packages are not updated with the latest version if an older version has been in
 }
 \examples{
 # Installs the dplyr package:
-install.packages("dplyr")
+install.packages.ifmissing("dplyr")
 
 # Installs the ggplot2 package, but
 # will not reinstall the dplyr package.
-install.packages(c("dplyr", "ggplot2"))
+install.packages.ifmissing(c("dplyr", "ggplot2"))
 
 }
 \seealso{
