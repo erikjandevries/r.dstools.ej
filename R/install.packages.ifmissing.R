@@ -20,14 +20,14 @@
 #'
 #' @examples
 #' # Installs the dplyr package:
-#' install.packages("dplyr")
+#' install.packages.ifmissing("dplyr")
 #' 
 #' # Installs the ggplot2 package, but
 #' # will not reinstall the dplyr package.
-#' install.packages(c("dplyr", "ggplot2"))
+#' install.packages.ifmissing(c("dplyr", "ggplot2"))
 #'
 #' @export
-install.packages.ifmissing <- function(pkgs, lib = .libPaths()[1], ...) {
+install.packages.ifmissing <- function(pkgs, lib = .libPaths(), ...) {
   installedPkgs <- rownames(installed.packages(lib.loc = lib));
   missingPkgs <- c();
   alreadyInstalledPkgs <- c();
