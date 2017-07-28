@@ -20,7 +20,7 @@
 #' project_config_reload("my_config.yml")
 #'
 #' @export
-project_reload_config <- function(config_file = NULL,
+project_config_reload <- function(config_file = NULL,
                                   keepDTS = FALSE
                                   ) {
   if (is.null(config_file)) {

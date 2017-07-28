@@ -28,7 +28,7 @@ project_restart <- function(lib = NULL,
 
   # Configuration -----------------------------------------------------------
 
-  project_reload_config(config_file)
+  project_config_reload(config_file)
 
 
   # Prepare folders ---------------------------------------------------------
