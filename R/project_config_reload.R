@@ -1,3 +1,24 @@
+#' @title
+#' Reload Project Config
+#'
+#' @description
+#' (Re)loads the project configuration file.
+#'
+#' @details
+#' Loads or reloads the project configuration file.
+#'
+#' The previous DateTime Stamp will be preserved is so indicated.
+#'
+#' @param config_file A string specifying the path to the configuration file. If not specified, the \code{config.yml} file in the working directory will be loaded if it exists, otherwise a default configuration file will be loaded from the package.
+#' @param keepDTS A boolean flag indicating whether the previously set DateTime Stamp should be reused (if \code{project_reload_config} has been used before to set \code{project_config$DTS}).
+#'
+#' @seealso
+#' \code{\link{project_restart}}.
+#'
+#' @examples
+#' project_config_reload()
+#' project_config_reload("my_config.yml")
+#'
 #' @export
 project_reload_config <- function(config_file = NULL,
                                   keepDTS = FALSE
