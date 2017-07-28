@@ -4,7 +4,7 @@
 \alias{install.packages.ifmissing}
 \title{Install Packages (If Missing)}
 \usage{
-install.packages.ifmissing(pkgs, lib = .libPaths()[1], ...)
+install.packages.ifmissing(pkgs, lib = .libPaths(), ...)
 }
 \arguments{
 \item{pkgs}{A character vector of the names of packages which should be installed if they are not installed already.}

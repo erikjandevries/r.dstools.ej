@@ -4,12 +4,6 @@
 # Log files
 log.txt
 
-# Temporary files
-tmp/
-
-# Output files
-output/
-
 # History files
 .Rhistory
 .Rapp.history

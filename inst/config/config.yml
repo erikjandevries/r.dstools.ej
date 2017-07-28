@@ -1,0 +1,38 @@
+default:
+  DTS: !expr DTS
+  DTSName: !expr format(DTS, "%Y-%m-%dT%H-%M-%SZ")
+
+  dpi: 600
+  colours: !expr config::get(file = "colours.yml")
+
+  folders:
+    in: data
+    out: !expr paste(getwd(), "development", format(DTS, "%Y-%m-%dT%H-%M-%SZ"), sep="/")
+    rds: !expr paste(getwd(), "development", "RDS", sep="/")
+
+  files:
+    log: Rlog.log
+
+  logging:
+    level: DEBUG
+
+  shiny:
+    port: 7861
+
+  copy.source.to.output: TRUE
+
+acceptance:
+  folders:
+    output: !expr paste(getwd(), "acceptance", sep="/")
+    rds: !expr paste(getwd(), "acceptance", "RDS", sep="/")
+  logging:
+    level: INFO
+  copy.source.to.output: FALSE
+
+production:
+  folders:
+    output: !expr paste(getwd(), "production", sep="/")
+    rds: !expr paste(getwd(), "production", "RDS", sep="/")
+  logging:
+    level: INFO
+  copy.source.to.output: FALSE

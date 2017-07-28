@@ -1,15 +1,16 @@
 Package: dstools.ej
 Type: Package
 Title: Data Science Tools by Erik Jan
-Version: 0.1.0
-Authors@R: person("Erik Jan", "de Vries", email = "yourfault@somewhere.net", role = c("aut", "cre"))
-Maintainer: Erik Jan de Vries <yourfault@somewhere.net>
+Version: 0.2.0
+Authors@R: person("Erik Jan", "de Vries", email = "yourname@somewhere.net", role = c("aut", "cre"))
+Maintainer: Erik Jan de Vries <yourname@somewhere.net>
 Description: Functions for common data science related problems
 Depends:
     R (>= 3.1.0)
 License: Apache License 2.0
 LazyData: TRUE
 Imports:
+    config,
     logging,
 Suggests:
     dplyr,
