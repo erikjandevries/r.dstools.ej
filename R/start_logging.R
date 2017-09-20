@@ -2,6 +2,12 @@
 #' Start Logging
 #'
 #' @description
+#' Initialises the logging to the console and optionally a file.
+#'
+#' @param level The logging level of the root logger. Defaults to "INFO".
+#' @param file Optional file name or path for logging to a file. Defaults to NULL.
+#' @param logger Character string indicating the logger for the handler. Defaults to the root logger.
+#' @param reset Boolean value indicating whether to reset the logging to the \code{basicConfig}.
 #'
 #' @details
 #' Starts logging by loading the \code{logging} package, resetting the logging

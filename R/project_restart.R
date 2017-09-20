@@ -48,18 +48,17 @@ project_restart <- function(lib = NULL,
 
   # Logging -----------------------------------------------------------------
 
-  library(logging)
-  logReset()
-  basicConfig(level = project_config$logging$level)
-  addHandler(  writeToFile
+  logging::logReset()
+  logging::basicConfig(level = project_config$logging$level)
+  logging::addHandler(  logging::writeToFile
                , file   = paste(project_config$folders$out, project_config$files$log, sep="/")
                , level  = project_config$logging$level
                , logger = '')
 
   # Log some basic
-  loginfo(paste0("Configuration:               ", attr(project_config, "config")))
-  loginfo(paste0("Logging started at level:    ", project_config$logging$level))
-  loginfo(paste0("Working directory:           ", getwd()))
-  loginfo(paste0("Output directory:            ", project_config$folders$out))
+  logging::loginfo(paste0("Configuration:               ", attr(project_config, "config")))
+  logging::loginfo(paste0("Logging started at level:    ", project_config$logging$level))
+  logging::loginfo(paste0("Working directory:           ", getwd()))
+  logging::loginfo(paste0("Output directory:            ", project_config$folders$out))
 
 }

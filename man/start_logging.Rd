@@ -6,8 +6,17 @@
 \usage{
 start_logging(level = "INFO", file = NULL, logger = "", reset = TRUE)
 }
-\description{
+\arguments{
+\item{level}{The logging level of the root logger. Defaults to "INFO".}
 
+\item{file}{Optional file name or path for logging to a file. Defaults to NULL.}
+
+\item{logger}{Character string indicating the logger for the handler. Defaults to the root logger.}
+
+\item{reset}{Boolean value indicating whether to reset the logging to the \code{basicConfig}.}
+}
+\description{
+Initialises the logging to the console and optionally a file.
 }
 \details{
 Starts logging by loading the \code{logging} package, resetting the logging

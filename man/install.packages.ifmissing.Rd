@@ -9,7 +9,7 @@ install.packages.ifmissing(pkgs, lib = .libPaths(), ...)
 \arguments{
 \item{pkgs}{A character vector of the names of packages which should be installed if they are not installed already.}
 
-\item{lib}{A character vector giving the library directories where to look for and install the packages. If missing, defaults to the first element of \code{\link{.libPaths()}}.}
+\item{lib}{A character vector giving the library directories where to look for and install the packages. If missing, defaults to the first element of \code{\link{.libPaths}()}.}
 
 \item{...}{Additional arguments to be passed to \code{\link{install.packages}}.}
 }

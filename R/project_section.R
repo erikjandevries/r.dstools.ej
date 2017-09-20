@@ -1,6 +1,6 @@
 #' @export
 project_section <- function(name, folder = NULL) {
-  loginfo(paste("Starting section:", name))
+  logging::loginfo(paste("Starting section:", name))
 
   if (!is.null(folder)) {
     assign("outputFolder",
