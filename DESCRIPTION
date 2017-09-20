@@ -1,7 +1,7 @@
 Package: dstools.ej
 Type: Package
 Title: Data Science Tools by Erik Jan
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: person("Erik Jan", "de Vries", email = "yourname@somewhere.net", role = c("aut", "cre"))
 Maintainer: Erik Jan de Vries <yourname@somewhere.net>
 Description: Functions for common data science related problems
@@ -14,6 +14,7 @@ Imports:
     logging,
 Suggests:
     dplyr,
+    readr,
     RODBC,
     ROracle,
 RoxygenNote: 5.0.1
