@@ -5,7 +5,7 @@
 #' (Re)loads the project configuration file.
 #'
 #' @details
-#' Loads or reloads the project configuration file.
+#' Loads or reloads the project configuration file into an R variable \code{project_config}.
 #'
 #' The previous DateTime Stamp will be preserved is so indicated.
 #'
