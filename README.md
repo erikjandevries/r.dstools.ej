@@ -13,8 +13,16 @@ R functions for common data science related problems.
   * sqlQuery.cached
 * Logging
   * start_logging
+* Models
+  * models_reset
 * Project
-  * restart_project
+  * project_restart
+  * project_section
+  * project_subsection
+  * project_config_reload
+  * project_packages
+  * project_output_folder
+  * project_output_folder_path
 * Utilities
   * ensure_folder
   * install.packages.ifmissing
