@@ -1,7 +1,7 @@
 Package: dstools.ej
 Type: Package
 Title: Data Science Tools by Erik Jan
-Version: 0.2.1
+Version: 0.2.2
 Authors@R: person("Erik Jan", "de Vries", email = "yourname@somewhere.net", role = c("aut", "cre"))
 Maintainer: Erik Jan de Vries <yourname@somewhere.net>
 Description: This packages contains functions for common data science related problems.

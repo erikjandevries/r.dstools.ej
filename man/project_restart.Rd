@@ -22,6 +22,7 @@ project_restart(lib = NULL, config_file = NULL)
 \item Loads the project configuration file into an R variable \code{project_config}.
 \item Ensures all the folders specified in the configuration file exist.
 \item Initialises logging.
+\item Initialises the models list.
 }
 }
 \examples{

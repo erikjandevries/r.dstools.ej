@@ -48,8 +48,9 @@ project_config_reload <- function(config_file = NULL,
   }
 
   # Load the configuration
+  project_config <- config::get(file = config_file, use_parent = FALSE)
   assign("project_config",
-         config::get(file = config_file, use_parent = FALSE),
+         list2env(project_config),
          envir=globalenv())
 
   # Remove the temporary DTS object

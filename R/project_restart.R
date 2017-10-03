@@ -12,6 +12,7 @@
 #' \item Loads the project configuration file into an R variable \code{project_config}.
 #' \item Ensures all the folders specified in the configuration file exist.
 #' \item Initialises logging.
+#' \item Initialises the models list.
 #' }
 #'
 #' @param lib A character vector with the locations of R library trees.
@@ -94,4 +95,9 @@ project_restart <- function(lib = NULL,
   logging::loginfo(paste0("Working directory:           ", getwd()))
   logging::loginfo(paste0("Output directory:            ", project_config$folders$out))
 
+
+  # Models ------------------------------------------------------------------
+  models_reset()
 }
+
+

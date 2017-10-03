@@ -1,11 +1,29 @@
+#' @title
+#' Project Section
+#'
+#' @description
+#' Starts a project section.
+#'
 #' @export
-project_section <- function(name, folder = NULL) {
-  logging::loginfo(paste("Starting section:", name))
-
-  if (!is.null(folder)) {
-    assign("outputFolder",
-           paste(project_config$folders$output, folder, sep="/"),
-           envir = globalenv())
-    ensure_folder(outputFolder)
+project_section <- function(name = NULL, folder = NULL) {
+  if (is.null(name)) {
+    return(project_config$current_section)
   }
+
+  logging::loginfo(paste("Starting section:", name))
+  project_config$current_section <- name
+  invisible(project_output_folder(folder))
+}
+
+#' @rdname project_section
+#'
+#' @export
+project_subsection <- function(name, folder = NULL) {
+  if (is.null(name)) {
+    return(project_config$current_subsection)
+  }
+
+  logging::loginfo(paste("Starting subsection:", name))
+  project_config$current_subsection <- name
+  invisible(project_output_folder(folder))
 }
