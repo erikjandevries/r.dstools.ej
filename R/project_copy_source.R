@@ -29,5 +29,5 @@ project_copy_source <- function(always = FALSE) {
               , copy.mode = TRUE);
   rm(flist);
 
-  project_output_folder(tmp_folder)
+  invisible(project_output_folder(tmp_folder))
 }
