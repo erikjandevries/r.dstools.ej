@@ -28,21 +28,30 @@
 #'
 #' @export
 install.packages.ifmissing <- function(pkgs, lib = .libPaths(), ...) {
-  installedPkgs <- rownames(installed.packages(lib.loc = lib));
-  missingPkgs <- c();
-  alreadyInstalledPkgs <- c();
+  installedPkgs <- rownames(installed.packages(lib.loc = lib))
+  missingPkgs <- c()
+  alreadyInstalledPkgs <- c()
 
   for (p in pkgs) {
     if (!(p %in% installedPkgs)) {
-      missingPkgs <- c(missingPkgs, p);
+      missingPkgs <- c(missingPkgs, p)
     } else {
-      alreadyInstalledPkgs <- c(alreadyInstalledPkgs, p);
+      alreadyInstalledPkgs <- c(alreadyInstalledPkgs, p)
     }
-  }; rm(p);
+  }
 
-  logging::logdebug(paste("Packages already installed:", paste(alreadyInstalledPkgs, collapse = ", ")));
+  logging::logdebug(paste("Packages already installed:", paste(alreadyInstalledPkgs, collapse = ", ")))
   if (length(missingPkgs) > 0) {
-    logging::loginfo(paste("Installing new packages:", paste(missingPkgs, collapse = ", ")));
-    install.packages(missingPkgs, lib = lib, ...);
+    logging::loginfo(paste("Installing new packages:", paste(missingPkgs, collapse = ", ")))
+    for (i in 1:length(lib)) {
+      tryCatch({
+        install.packages(missingPkgs, lib = lib[i], ...)
+        break
+      }, warning = function(w) {
+        logging::logwarn(w)
+      }, error = function(e) {
+        logging::logerror(e)
+      })
+    }
   }
 }
