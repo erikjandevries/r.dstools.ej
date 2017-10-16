@@ -89,7 +89,7 @@ project_restart <- function(lib = NULL,
                , logger = '')
 
   # Log some basic
-  logging::loginfo(paste0("Configuration:               ", attr(project_config, "config")))
+  logging::loginfo(paste0("Configuration:               ", project_config$config))
   logging::loginfo(paste0("Logging started at level:    ", project_config$logging$level))
   logging::loginfo(paste0("User account:                ", Sys.info()[["login"]]))
   logging::loginfo(paste0("Working directory:           ", getwd()))
