@@ -49,6 +49,7 @@ project_config_reload <- function(config_file = NULL,
 
   # Load the configuration
   project_config <- config::get(file = config_file, use_parent = FALSE)
+  project_config$config <- attr(project_config, "config")
   assign("project_config",
          list2env(project_config),
          envir=globalenv())
