@@ -26,3 +26,10 @@ R functions for common data science related problems.
 * Utilities
   * ensure_folder
   * install.packages.ifmissing
+
+
+### How to install
+
+    install.packages(c("config", "dplyr", "logging"))
+    install.packages(c("devtools", "roxygen2", "testthat", "knitr"))
+    devtools::install_github("erikjandevries/r.dstools.ej")
